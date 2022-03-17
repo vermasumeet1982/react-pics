@@ -12,8 +12,7 @@ class SearchBar extends React.Component {
         return (
             <div className="ui segment">
                 <form 
-                    onSubmit = {/*(e) => {e.preventDefault();
-                    console.log(this);}*/this.onFormSubmit} 
+                    onSubmit = {this.onFormSubmit} 
                     className="ui form">
                     <div className="field app">
                         <label>Image Search</label>
