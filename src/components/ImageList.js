@@ -2,7 +2,10 @@ import React from "react";
 class ImageList extends React.Component {
 
     render() {
-        return (this.props.images.length > 0 &&  <div> Found {this.props.images.length} images </div>)
+        const mappedImages = this.props.images.map((i) => {
+            return <img src={i?.urls?.small} alt={i?.alt_description}/>
+        });
+        return (mappedImages.length > 0 &&  <div> {mappedImages} </div>)
     }
 }
 
