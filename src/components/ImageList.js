@@ -3,7 +3,12 @@ class ImageList extends React.Component {
 
     render() {
         const mappedImages = this.props.images.map((i) => {
-            return <img src={i?.urls?.small} alt={i?.alt_description}/>
+            const {
+                id,
+                alt_description,
+                urls,
+            } = i;
+            return <img key={id} src={urls?.small} alt={alt_description}/>
         });
         return (mappedImages.length > 0 &&  <div> {mappedImages} </div>)
     }
